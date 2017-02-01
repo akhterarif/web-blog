@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for blog in blogs_list  %}
+    <li>
+        <h1>
+            <a href="#"> {{ blog.title }} </a>
+        </h1>
+        <p>
+            {{ blog.created_at }}
+        </p>
+        <p>
+            {{ blog.body }}
+        </p>
+    </li>
+    {% endfor %}
+{% endblock %}
