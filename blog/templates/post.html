@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <li>
+        <h1>
+            <a href="#"> {{ object.title }} </a>
+        </h1>
+        <p>
+            {{ object.created_at }}
+        </p>
+        <p>
+            {{ object.body }}
+        </p>
+        <p>
+            Tagged under: <u>{{ object.tags.all|join:", " }}</u>
+        </p>
+    </li>
+{% endblock %}

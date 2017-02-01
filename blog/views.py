@@ -10,3 +10,7 @@ class BlogIndex(generic.ListView):
     def get_queryset(self):
         return models.Entry.objects.published()
 
+class BlogDetail(generic.DetailView):
+    model = models.Entry
+    template_name = 'post.html'
+    context_object_name = 'blog'

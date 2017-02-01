@@ -3,7 +3,7 @@
     {% for blog in blogs_list  %}
     <li>
         <h1>
-            <a href="#"> {{ blog.title }} </a>
+            <a href="{% url 'blog:blog_detail' blog.slug %}"> {{ blog.title }} </a>
         </h1>
         <p>
             {{ blog.created_at }}

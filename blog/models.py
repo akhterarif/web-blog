@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
-
 from django.db import models
+from django.core.urlresolvers import reverse
 
 class Tag(models.Model):
     slug = models.SlugField(max_length=255, unique=True)
@@ -25,6 +25,9 @@ class Entry(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        reverse("blog_detail", kwargs={"slug": self.slug})
 
     class Meta:
         verbose_name = "Blog Entry"
