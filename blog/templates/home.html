@@ -11,6 +11,9 @@
         <p>
             {{ blog.body }}
         </p>
+        <p>
+            Tagged under: <u>{{ blog.tags.all|join:", " }}</u>
+        </p>
     </li>
     {% endfor %}
 {% endblock %}

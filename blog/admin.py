@@ -6,3 +6,4 @@ class EntryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug" : ("title",)}
 
 admin.site.register(models.Entry, EntryAdmin)
+admin.site.register(models.Tag)
